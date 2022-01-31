@@ -1,0 +1,5 @@
+echo "$PATH" | grep -Fq "$HOME/bin" || export PATH="$HOME/bin:$PATH"
+echo "$PATH" | grep -Fq "$HOME/.local/bin" || export PATH="$HOME/.local/bin:$PATH"
+echo "$PATH" | grep -Fq "$HOME/go/bin" || export PATH="$HOME/go/bin:$PATH"
+
+export EDITOR=vim

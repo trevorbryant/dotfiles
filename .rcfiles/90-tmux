@@ -1,0 +1,7 @@
+# tmux open new or attach existing session
+shopt -s histappend
+#export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t woot || tmux new -s woot
+fi
