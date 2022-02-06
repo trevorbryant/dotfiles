@@ -28,7 +28,8 @@ function update {
     flatpak update --assumeyes
     flatpak uninstall --assumeyes --unused
     sudo dnf --assumeyes offline-upgrade download --refresh && {
-    sudo dnf --assumeyes offline-upgrade
+      sudo dnf --assumeyes offline-upgrade reboot ||
+      systemctl restart -i
     }
 }
 
@@ -40,3 +41,6 @@ fi
 [ -d $HOME/.rcfiles ] && for file in $HOME/.rcfiles/*; do . $file; done
 
 unset rc
+
+alias rhup='nmcli connection up Red\ Hat\ Global\ VPN --ask'
+alias rhdown='nmcli connection down Red\ Hat\ Global\ VPN'

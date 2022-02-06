@@ -1,4 +1,7 @@
 alias vim='nvim'
+alias killwine="pkill -9 '\.exe'"
+
+# flatpaks
 alias discord='flatpak run com.discordapp.Discord'
 alias mattermost='flatpak run com.mattermost.Desktop'
 alias john='flatpak run com.openwall.John'
@@ -6,4 +9,7 @@ alias slack='flatpak run com.slack.Slack'
 alias atom='flatpak run io.atom.Atom'
 alias ghidra='flatpak run org.ghidra_sre.Ghidra'
 alias signal='flatpak run org.signal.Signal'
-alias zoom='flatpak run us.zoom.Zoom' 
+alias zoom='flatpak run us.zoom.Zoom'
+
+# toolboxes
+alias gobuster='toolbox run --container gobuster gobuster'
