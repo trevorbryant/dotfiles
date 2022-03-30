@@ -33,14 +33,6 @@ function update {
     }
 }
 
-if [ -f /var/run/reboot-required ] 
-then
-    echo "Restart required to finalize system updates."
-fi
-
 [ -d $HOME/.rcfiles ] && for file in $HOME/.rcfiles/*; do . $file; done
 
 unset rc
-
-alias rhup='nmcli connection up Red\ Hat\ Global\ VPN --ask'
-alias rhdown='nmcli connection down Red\ Hat\ Global\ VPN'
