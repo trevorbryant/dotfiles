@@ -27,7 +27,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 " begin plugins
-call plug#begin(~/.local/share/nvim/plugged/)
+call plug#begin()
 
 " NERDtree https://github.com/preservim/nerdtree
 Plug 'preservim/nerdtree'
