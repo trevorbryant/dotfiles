@@ -14,3 +14,29 @@ set autoindent          " auto indent for quality of life
 " search features
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
+
+" filetypes for coreos
+au BufRead,BufNewFile *.ign set filetype=json
+au BufRead,BufNewFile *.btn set filetype=yaml
+
+" install plug if not present
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" begin plugins
+call plug#begin(~/.local/share/nvim/plugged/)
+
+" NERDtree https://github.com/preservim/nerdtree
+Plug 'preservim/nerdtree'
+noremap <C-n> :NERDTreeToggle<CR>
+noremap! <C-n> :NERDTreeToggle<CR>
+" start NERDTree
+autocmd VimEnter * NERDTree
+
+
+
+" end plugins
+call plug#end()
