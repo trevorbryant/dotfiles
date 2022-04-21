@@ -6,10 +6,10 @@ colorscheme ron         " colorscheme ron
 
 " tab settings
 set tabstop=2           " width that a <TAB> character displays as
-set expandtab           " convert <TAB> key-presses to spaces
 set shiftwidth=2        " number of spaces to use for each step of (auto)indent
 set softtabstop=2       " backspace after pressing <TAB> will remove up to this many spaces
 set autoindent          " auto indent for quality of life
+set expandtab           " convert <TAB> key-presses to spaces
 
 " search features
 set incsearch           " search as characters are entered
@@ -35,8 +35,6 @@ noremap <C-n> :NERDTreeToggle<CR>
 noremap! <C-n> :NERDTreeToggle<CR>
 " start NERDTree
 autocmd VimEnter * NERDTree
-
-
 
 " end plugins
 call plug#end()
