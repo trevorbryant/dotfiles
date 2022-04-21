@@ -2,13 +2,13 @@
 alias vim='nvim'
 alias python=python3
 alias docker=podman
-alias butane='podman run --rm --tty --interactive \
-              --security-opt label=disable        \
+alias butane='podman run --rm --interactive \
+              --security-opt label=disable \
               --volume ${PWD}:/pwd --workdir /pwd \
               quay.io/coreos/butane:release'
 alias coreos-installer='sudo podman run --privileged --rm \
-                       -v /dev:/dev -v /run/udev:/run/udev -v ${PWD}:/pwd -w /pwd \
-                       quay.io/coreos/coreos-installer:release'
+              -v /dev:/dev -v /run/udev:/run/udev -v ${PWD}:/pwd -w /pwd \
+              quay.io/coreos/coreos-installer:release'
 alias killwine="pkill -9 '\.exe'"
 
 # flatpaks
