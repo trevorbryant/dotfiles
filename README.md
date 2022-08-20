@@ -1,4 +1,5 @@
 # dotfiles
+Repository migrated from GitHub to [here](https://git.jharmison.com/trevor/dotfiles).
 
 ## Description
 Nobody still likes losing their backups
